@@ -1,3 +1,9 @@
 <% @pins.each do |pin| %>
-     <p><%= link_to pin.description, pin %></p>
+  <% if pin.image.attached? %>
+    <p>
+      <br>
+      <%= image_tag pin.image %>
+    </p>
+  <% end %>
+  <p><%= link_to pin.description, pin %></p>
 <% end %>

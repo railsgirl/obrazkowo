@@ -42,7 +42,7 @@ class PinsController < ApplicationController
   private
 
   def pin_params
-    params.require(:pin).permit(:description)
+    params.require(:pin).permit(:description,:image)
   end
 
   def find_pin
