@@ -2,7 +2,7 @@
   <% if pin.image.attached? %>
     <p>
       <br>
-      <%= image_tag pin.image %>
+      <%= link_to image_tag(pin.image.variant(resize: '320x210>')), pin %>
     </p>
   <% end %>
   <p><%= link_to pin.description, pin %></p>
