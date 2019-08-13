@@ -1,3 +1,10 @@
+<% if @pin.image.attached? %>
+  <p>
+    <br>
+    <%= image_tag @pin.image.variant(resize: '470x300') if @pin.image.attached?%>
+  </p>
+<% end %>
+<strong>Description:</strong>
 <p><%= @pin.description %></p>
 <% if @pin.user == current_user %>
   <%= link_to "Edit", edit_pin_path(@pin) %>
